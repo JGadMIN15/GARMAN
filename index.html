@@ -27,7 +27,7 @@
             background: #fff;
         }
 
-        /* ══ NAV ══ */
+        /* NAV */
         .nav {
             position: fixed;
             top: 0; left: 0; width: 100%;
@@ -52,11 +52,15 @@
             width: 42px; height: 42px;
             border-radius: 50%;
             border: 2px solid var(--azul);
-            display: flex; align-items: center; justify-content: center;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 18px;
-            color: var(--azul);
+            overflow: hidden;
             flex-shrink: 0;
+        }
+
+        .nav-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .nav-name {
@@ -85,7 +89,7 @@
             background: rgba(0,212,255,.08);
         }
 
-        /* ══ SECCIONES ══ */
+        /* SECCIONES */
         section {
             padding: 96px 48px 80px;
             border-bottom: 1px solid var(--borde);
@@ -104,7 +108,7 @@
             line-height: 1;
         }
 
-        /* ══ GRID PRODUCTOS ══ */
+        /* GRID */
         .productos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -112,7 +116,7 @@
             max-width: 1100px;
         }
 
-        /* ══ TARJETA ══ */
+        /* CARD */
         .card {
             border: 1px solid var(--borde);
             border-radius: 14px;
@@ -211,7 +215,7 @@
 
         .btn-wa:hover { opacity: .88; transform: scale(1.03); }
 
-        /* ══ CONTACTO ══ */
+        /* CONTACTO */
         .contacto-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -251,26 +255,7 @@
             font-weight: 400;
         }
 
-        .btn-insta {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
-            color: #fff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 8px;
-            font-family: 'Rajdhani', sans-serif;
-            font-weight: 600;
-            font-size: 15px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: opacity .2s;
-        }
-
-        .btn-insta:hover { opacity: .85; }
-
-        /* ══ FOOTER ══ */
+        /* FOOTER */
         footer {
             padding: 28px 48px;
             text-align: center;
@@ -280,37 +265,31 @@
             text-transform: uppercase;
         }
 
-        /* ══ TABLET ══ */
+        /* TABLET */
         @media (max-width: 768px) {
             .nav { padding: 0 24px; height: 60px; }
             .nav-name { font-size: 24px; letter-spacing: 5px; }
             .nav-links a { font-size: 11px; padding: 7px 10px; }
-
             section { padding: 72px 24px 60px; }
             section:first-of-type { margin-top: 60px; }
             section > h2 { font-size: 42px; margin-bottom: 36px; }
-
             .productos-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
             .contacto-grid { grid-template-columns: 1fr; }
             footer { padding: 24px; }
         }
 
-        /* ══ MÓVIL ══ */
+        /* MÓVIL */
         @media (max-width: 480px) {
             .nav { padding: 0 16px; height: 56px; }
-            .nav-logo { width: 34px; height: 34px; font-size: 14px; }
+            .nav-logo { width: 34px; height: 34px; }
             .nav-name { font-size: 20px; letter-spacing: 4px; }
             .nav-links a { font-size: 10px; padding: 6px 7px; letter-spacing: 1px; }
-
             section { padding: 60px 16px 48px; }
             section:first-of-type { margin-top: 56px; }
             section > h2 { font-size: 34px; letter-spacing: 4px; }
-
             .productos-grid { grid-template-columns: 1fr; }
-
             .card-footer { flex-direction: column; align-items: flex-start; gap: 12px; }
             .btn-wa { width: 100%; justify-content: center; }
-
             footer { padding: 20px 16px; }
         }
 
@@ -318,10 +297,11 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
     <div class="nav-brand">
-        <div class="nav-logo">G</div>
+        <div class="nav-logo">
+            <img src="asseds/logo.jpeg" alt="GARMAN">
+        </div>
         <span class="nav-name">GARMAN</span>
     </div>
     <div class="nav-links">
@@ -331,7 +311,6 @@
     </div>
 </nav>
 
-<!-- ZAPATILLAS -->
 <section id="zapatillas">
     <h2>Zapatillas</h2>
     <div class="productos-grid">
@@ -348,7 +327,7 @@
                 <p>Edición limitada. Materiales premium y diseño icónico.</p>
                 <div class="card-footer">
                     <span class="precio">€ 55,99</span>
-                    <a class="btn-wa" href="https://wa.me/34622163503?text=Hola, me interesan las Nike Travis Scott, ¿me puedes comentar el precio?, mi talla es ()" target="_blank">💬 WhatsApp</a>
+                    <a class="btn-wa" href="https://wa.me/34622163503?text=Hola, me interesan las Nike Travis Scott, mi talla es ()" target="_blank">💬 WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -365,7 +344,7 @@
                 <p>Cultura street en estado puro. Lanzamiento ultra limitado.</p>
                 <div class="card-footer">
                     <span class="precio">€ 64,99</span>
-                    <a class="btn-wa" href="https://wa.me/34622163503?text=Hola, me interesan las Nike Corteiz, ¿me puedes comentar el precio?, mi talla es ()" target="_blank">💬 WhatsApp</a>
+                    <a class="btn-wa" href="https://wa.me/34622163503?text=Hola, me interesan las Nike Corteiz, mi talla es ()" target="_blank">💬 WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -373,7 +352,6 @@
     </div>
 </section>
 
-<!-- CHAQUETONES -->
 <section id="chaquetones">
     <h2>Chaquetones</h2>
     <div class="productos-grid">
@@ -390,7 +368,7 @@
                 <p>Lujo técnico italiano. Acolchado premium, elegancia total.</p>
                 <div class="card-footer">
                     <span class="precio">€ 79,99</span>
-                    <a class="btn-wa" href="https://wa.me/34622163503?text=Hola, me interesa el Moncler, ¿me puedes comentar el precio?, mi talla es ()" target="_blank">💬 WhatsApp</a>
+                    <a class="btn-wa" href="https://wa.me/34622163503?text=Hola, me interesa el Moncler, mi talla es ()" target="_blank">💬 WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -398,7 +376,6 @@
     </div>
 </section>
 
-<!-- CONTACTO -->
 <section id="contacto">
     <h2>Contacto</h2>
     <div class="contacto-grid">
@@ -419,7 +396,6 @@
             <div><strong>Atención</strong>24H · Todos los días</div>
         </div>
     </div>
-  
 </section>
 
 <footer>© 2026 GARMAN · Granada, España</footer>
